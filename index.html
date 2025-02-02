@@ -1,70 +1,167 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
-
+<html lang="ar" dir="rtl">
 <head>
-    <title>Omar</title>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-<style>@media screen and (max-width:700px) {
-    images{
-        width: 70%;
-        height: auto;
-    }
-}
-
-</style>
+    <title>عمر المدني</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4b4d4c;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #289ea7;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #aaa8a8;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+            margin-top: 20px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        form input, form textarea, form button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        form button {
+            background-color: #1f989c;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        form button:hover {
+            background-color: #457fa0;
+        }
+        .testimonial {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 5px solid #4CAF50;
+            margin: 20px 0;
+        }
+    </style>
 </head>
-
 <body>
-    <div class="menu" id="mymenu">
-        <div>
-            <button class="icon" onclick="myfunction()">
-                <i class="fa fa-bars"></i>
-            <script src="webicon.js"></script>
-        </div>
-        <ul>
-            <li><a href="#top">الصفحة الرئيسة</a></li>
-            <li><a href="#history">التاريخ</a></li>
-            <li><a href="#gallery">المعرض</a></li>
-            <li><a href="#about">نبذة</a></li>
-            <li><a href="contact-form.html" target="_blank">اتصل بنا</a></li>
-        </ul>
-    </div>
-    <div class="main">
-        <h1> تعمل كرة القدم على جمع الناس معًا </h1>
-        <p>الهدف من حضور الجمهور في هذه اللعبة هو تشجيع اللاعبين أثناء المباراة. </p>
-        <h2 id="history">التاريخ</h2>
-        <p>تعدّ كرة القدم رياضة ذات تاريخ طويل، نشأت بشكلها الحالي في إنجلترا في منتصف القرن التاسع عشر.</br>
-            وُجدت أندية كرة القدم منذ القرن الخامس عشر لكنها كانت غير منظمة ودون صفة رسمية، ثم تمّ إنشاء </br>
-            الكثير من هذه الأندية في أواخر القرن التاسع عشر، ولكن القليل منها فقط استمر بعد ذلك.</br>
-            يعتقد معظم المؤرخين أن الأندية التي استمرت بنشاطها كانت تقع في مناطق أكثر ثراءً قليلًا،</br>
-            حيث كان الناس لا يعملون بعد ظهر يوم السبت وكانوا قادرين على تحمل نفقات حضور المباريات.</p>
+
+    <header>
+        <h1>مرحبًا بكم في موقعنا </h1>
+        <p>نقدم لكم أفضل الحلول التقنية والخدمات المبتكرة</p>
+    </header>
+
+    <nav>
+        <a href="#home">الرئيسية</a>
+        <a href="#about">من نحن</a>
+        <a href="#services">الخدمات</a>
+        <a href="#gallery">معرض الصور</a>
+        <a href="#contact">اتصل بنا</a>
+    </nav>
+
+    <div class="container">
+        <section id="home">
+            <h2>الرئيسية</h2>
+            <p>مرحبًا بكم في موقعنا الإلكتروني. هنا يمكنكم العثور على معلومات مفيدة وخدماتنا المتنوعة.</p>
+            <div class="testimonial">
+                <p>"لقد كانت تجربة رائعة التعامل مع فريق العمل، أنصح الجميع بالتعامل معهم."</p>
+                <p><strong>- عميل راضي</strong></p>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>من نحن</h2>
+            <p>نقدم الحلول التقنية والخدمات المبتكرة لعملائنا. نهدف إلى توفير أفضل الحلول التي تلبي احتياجات العملاء.</p>
+        </section>
+
+        <section id="services">
+            <h2>الخدمات</h2>
+            <ul>
+                <li>تصميم المواقع الإلكترونية</li>
+                <li>تطوير التطبيقات</li>
+                <li>استشارات تقنية</li>
+                <li>التسويق الإلكتروني</li>
+            </ul>
+        </section>
+
+        <section id="gallery">
+   
+        </section>
+
+        <section id="contact">
+            <h2>اتصل بنا</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="اسمك" required>
+                <input type="email" id="email" placeholder="بريدك الإلكتروني" required>
+                <textarea id="message" rows="5" placeholder="رسالتك" required></textarea>
+                <button type="submit">إرسال</button>
+            </form>
+        </section>
     </div>
 
-    <!--Let's add the images to our site-->
-    <div class="photos">
-        <h2 id="gallery"> المعرض</h2>
-        <img src="Images\1.png">
-        <img src="Images\2.png">
-        <img src="images\3.png">
-        <img src="Images\4.png">
-    </div>
-    <div class="thefooter">
-        <h2 id="about"> نبذة</h2>
+    <footer>
+        <p>&copy;  موقعنا. جميع الحقوق محفوظة.  عمر المدني</p>
+    </footer>
 
-        <p>من خلال هذه الصفحة يمكننا تبادل الأفكار والآراء </br>
-            حول فريق كرة القدم الذي نشجعه أو حول كرة القدم بشكل عام في وقتنا الحالي.</br>
-            يمكننا أيضًا التواصل من خلال النموذج لإضافة المزيد من الصور أو المقالات إلى المعرض.</p>
+    <script>
+        // JavaScript لتفعيل بعض الوظائف
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('تم استلام رسالتك، سنتواصل معك قريبًا!');
+            document.getElementById('contactForm').reset();
+        });
+    </script>
 
-        <h2>معلومات مفيدة</h2>
-        <ul>
-            <li><a href="mailto:info@example.com">info@example.com</a></li>
-            <li><a href="https://www.fifa.com/" target="_blank">Fifa.com </a></li>
-            <li><a href="https://www.uefa.com/" target="_blank">UEFA.com </a></li>
-        </ul>
-    </div>
 </body>
-
 </html>
